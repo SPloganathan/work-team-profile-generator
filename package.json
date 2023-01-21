@@ -4,7 +4,7 @@
   "description": "An application that takes in information about employees on a software engineering and generates a HTML webpage",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
