@@ -1,6 +1,10 @@
 // imported required modules
 const inquirer = require("inquirer");
 const fs = require("fs");
+const Manager = require("./lib/manager");
+const Intern = require("./lib/Intern");
+const Engineer = require("./lib/Engineer");
+const generateHtml = require("./src/generateHtml");
 
 // added prompts for getting inputs from user
 console.log("Welcome to the team generator");
@@ -95,6 +99,13 @@ class Team {
 
         .then((managerResponse) => {
           this.memberType = managerResponse.typeOfTeamMember;
+          const managerDetails = new Manager(
+            managerResponse.managerName,
+            managerResponse.managerId,
+            managerResponse.managerEmail,
+            managerResponse.managerOfficeNumber
+          );
+          this.teamMembers.push(managerDetails);
           this.getQuestions();
         });
     } else if (this.memberType === "Engineer") {
@@ -175,6 +186,13 @@ class Team {
         ])
         .then((engineerResponse) => {
           this.memberType = engineerResponse.typeOfTeamMember;
+          const engineerDetails = new Engineer(
+            engineerResponse.engineerName,
+            engineerResponse.engineerId,
+            engineerResponse.engineerEmail,
+            engineerResponse.engGitHub
+          );
+          this.teamMembers.push(engineerDetails);
           this.getQuestions();
         });
     } else if (this.memberType === "Intern") {
@@ -255,10 +273,17 @@ class Team {
         ])
         .then((internResponse) => {
           this.memberType = internResponse.typeOfTeamMember;
+          const internDetails = new Intern(
+            internResponse.internName,
+            internResponse.internId,
+            internResponse.internEmail,
+            internResponse.internSchool
+          );
+          this.teamMembers.push(internDetails);
           this.getQuestions();
         });
     } else {
-      fs.writeFile("dist/index.html", "hello", (error) =>
+      fs.writeFile("dist/index.html", generateHtml(this.teamMembers), (error) =>
         error
           ? console.log(error)
           : console.log("Created index.html inside dist folder")
