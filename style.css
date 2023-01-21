@@ -1,3 +1,9 @@
+/* adding style properties */
+/* universal properties */
+* {
+  font-family: "Playfair Display", serif !important;
+  font-size: 16px;
+}
 .header-wrapper {
   background-color: #f06666c2;
   color: #030303;
@@ -7,6 +13,17 @@
   align-items: center;
 }
 .row {
+  /* !important will override the default bootstrap properties */
   gap: 20px !important;
   justify-content: center;
+}
+.card-header {
+  background-color: #adebad;
+  margin-top: 12px;
+}
+.card {
+  max-width: 25rem;
+}
+.card:hover {
+  border: 5px solid #7b91ca !important;
 }
