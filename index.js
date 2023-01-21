@@ -12,11 +12,11 @@ class Team {
   constructor() {
     this.teamMembers = [];
     // this.memberType will hold the employee type selected by the manager and the respective prompts will be triggered based on this
-    this.memberType = "manager";
+    this.memberType = "Manager";
   }
   //    keeping all the prompt questions inside a function so that I can use it as a util function
   getQuestions() {
-    if (this.memberType === "manager") {
+    if (this.memberType === "Manager") {
       inquirer
         .prompt([
           {
