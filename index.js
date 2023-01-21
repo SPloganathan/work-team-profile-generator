@@ -24,24 +24,61 @@ class Team {
             type: "input",
             message: "What is your Manager's name?",
             name: "managerName",
+            validate: (managerName) => {
+              if (managerName.length > 0) {
+                return true;
+              } else {
+                console.log("\n Please enter valid Manager's name");
+                return false;
+              }
+            },
           },
 
           {
             type: "input",
             message: "What is the team Manager's ID?",
             name: "managerId",
+            validate: (managerId) => {
+              if (parseInt(managerId) > 0) {
+                return true;
+              } else {
+                console.log("\n Please enter valid Manager's Id as number");
+                return false;
+              }
+            },
           },
 
           {
             type: "input",
             message: "What is the team Manager's email?",
             name: "managerEmail",
+            validate: (managerEmail) => {
+              // Regex is given in if statement to validate the email
+              if (
+                /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+                  managerEmail
+                )
+              ) {
+                return true;
+              } else {
+                console.log("\n Please enter valid Manager's email");
+                return false;
+              }
+            },
           },
 
           {
             type: "input",
             message: "What is the team Manager's office number",
             name: "managerOfficeNumber",
+            validate: (managerOfficeNumber) => {
+              if (parseInt(managerOfficeNumber) > 0) {
+                return true;
+              } else {
+                console.log("\n Please enter valid Manager's office number");
+                return false;
+              }
+            },
           },
 
           {
@@ -68,24 +105,61 @@ class Team {
             type: "input",
             message: "What is your Engineer's name?",
             name: "engineerName",
+            validate: (engineerName) => {
+              if (engineerName.length > 0) {
+                return true;
+              } else {
+                console.log("\n Please enter valid Engineer's name");
+                return false;
+              }
+            },
           },
 
           {
             type: "input",
             message: "What is your Engineer's ID?",
             name: "engineerId",
+            validate: (engineerId) => {
+              if (parseInt(engineerId) > 0) {
+                return true;
+              } else {
+                console.log("\n Please enter valid Engineer's Id as number");
+                return false;
+              }
+            },
           },
 
           {
             type: "input",
             message: "What is your Engineer's email?",
             name: "engineerEmail",
+            validate: (engineerEmail) => {
+              // Regex is given in if statement to validate the email
+              if (
+                /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+                  engineerEmail
+                )
+              ) {
+                return true;
+              } else {
+                console.log("\n Please enter valid Engineer's email");
+                return false;
+              }
+            },
           },
 
           {
             type: "input",
             message: "What is your Engineer's GitHub username?",
             name: "engGitHub",
+            validate: (engGitHub) => {
+              if (engGitHub.length > 0) {
+                return true;
+              } else {
+                console.log("\n Please enter valid GitHub user name");
+                return false;
+              }
+            },
           },
 
           {
@@ -111,24 +185,61 @@ class Team {
             type: "input",
             message: "What is your Intern's name?",
             name: "internName",
+            validate: (internName) => {
+              if (internName.length > 0) {
+                return true;
+              } else {
+                console.log("\n Please enter valid Intern's name");
+                return false;
+              }
+            },
           },
 
           {
             type: "input",
             message: "What is your Intern's ID?",
             name: "internId",
+            validate: (internId) => {
+              if (parseInt(internId) > 0) {
+                return true;
+              } else {
+                console.log("\n Please enter valid Intern's Id as number");
+                return false;
+              }
+            },
           },
 
           {
             type: "input",
             message: "What is your Intern's email?",
             name: "internEmail",
+            validate: (internEmail) => {
+              // Regex is given in if statement to validate the email
+              if (
+                /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+                  internEmail
+                )
+              ) {
+                return true;
+              } else {
+                console.log("\n Please enter valid Intern's email");
+                return false;
+              }
+            },
           },
 
           {
             type: "input",
             message: "What is your Intern's school?",
             name: "internSchool",
+            validate: (internSchool) => {
+              if (internSchool.length > 0) {
+                return true;
+              } else {
+                console.log("\n Please enter valid Intern's school");
+                return false;
+              }
+            },
           },
 
           {
