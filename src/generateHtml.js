@@ -54,7 +54,7 @@ const generateCard = (employeeDetails) => {
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${employee.getId()}</li>
             <li class="list-group-item">
-              Email: <a href="mailto:">${employee.getEmail()}</a>
+              Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a>
             </li>
             <li class="list-group-item">Office number: ${employee.getOfficeNumber()}
             </li>
@@ -73,7 +73,7 @@ const generateCard = (employeeDetails) => {
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${employee.getId()}</li>
             <li class="list-group-item">
-              Email: <a href="mailto:">${employee.getEmail()}</a>
+              Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a>
             </li>
             <li class="list-group-item">GitHub: <a href="https://github.com/${employee.getGithub()}" target="_blank">${employee.getGithub()}</a>
             </li>
@@ -92,7 +92,7 @@ const generateCard = (employeeDetails) => {
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${employee.getId()}</li>
             <li class="list-group-item">
-              Email: <a href="mailto:">${employee.getEmail()}</a>
+              Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a>
             </li>
             <li class="list-group-item">School: ${employee.getSchool()}
             </li>
